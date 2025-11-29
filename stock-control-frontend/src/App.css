@@ -1,0 +1,128 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #4caf50;
+  --input-bg: #1e1e1e;
+  --input-border: #333;
+  --table-header-bg: #1f1f1f;
+  --table-row-bg: #1a1a1a;
+  --table-row-hover: #2a2a2a;
+  --msg-color: #ff9800;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+h2, h3 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  background-color: #1c1c1c;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 12px 15px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1em;
+  transition: border 0.3s, background-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  background-color: #222;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+}
+
+.msg {
+  margin-top: 10px;
+  color: var(--msg-color);
+  font-weight: 500;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--table-header-bg);
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+}
+
+tbody tr {
+  background-color: var(--table-row-bg);
+  transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+  background-color: var(--table-row-hover);
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #333;
+}
